@@ -1,6 +1,6 @@
 const refs = {
     body: document.querySelector('body'),
-    switch: document.querySelector('.js-switch-input'),
+    switch: document.querySelector('.theme-switch__toggle'),
   };
   
 const Theme = {
@@ -28,7 +28,7 @@ function changeTheme(e) {
       localStorage.setItem('theme', Theme.LIGHT);
     }
   }
-refs.body.addEventListener('change', changeTheme);
+refs.switch.addEventListener('change', changeTheme);
 
 
   
