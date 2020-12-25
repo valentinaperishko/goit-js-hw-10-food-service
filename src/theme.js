@@ -28,7 +28,7 @@ function changeTheme(e) {
       localStorage.setItem('theme', Theme.LIGHT);
     }
   }
-refs.switch.addEventListener('change', changeTheme);
+refs.body.addEventListener('change', changeTheme);
 
 
   
