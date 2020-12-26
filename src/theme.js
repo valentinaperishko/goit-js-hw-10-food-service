@@ -20,23 +20,16 @@ if (themeInLocalStorage === Theme.DARK) {
   
 function changeTheme(e) {
       if (e.target.checked) {
-      // refs.body.classList.add(Theme.DARK);
-      // refs.body.classList.remove(Theme.LIGHT);
-      replaceTheme(Theme.LIGHT, Theme.DARK);
+      replaceTheme();
       localStorage.setItem('theme', Theme.DARK);
 
     } else {
-      // refs.body.classList.add(Theme.LIGHT);
-      // refs.body.classList.remove(Theme.DARK);
-      replaceTheme(Theme.DARK, Theme.LIGHT);
+      replaceTheme();
       localStorage.setItem('theme', Theme.LIGHT);
     }
   }
-  const replaceTheme = (oldTheme, newTheme) => {
-    // refs.body.classList.add(Theme.DARK);
-    // refs.body.classList.remove(Theme.LIGHT); 
+  const replaceTheme = () => {
     refs.body.classList.toggle(Theme.DARK);
-    refs.body.classList.toggle(Theme.LIGHT);
     }
 refs.switch.addEventListener('change', changeTheme);
 
